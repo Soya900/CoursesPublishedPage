@@ -1,0 +1,350 @@
+/* GLOBAL */
+:root {
+    --primary-color: #fe4674;
+    --badges-color: #14c855;
+    --font-color: #000;
+    --deactive-color: #dcdcdc;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat, serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.flex-wrap {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HEADER */
+#header {
+    -webkit-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.2);
+}
+
+/* MAIN */
+#main {
+    padding: 75px 0 75px 0;
+    z-index: 1;
+}
+
+/* NAVBAR */
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav img.logo {
+    width: 1.875em;
+    margin-right: 1.3em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1.3em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 1em;
+    transition: color .1s ease-in;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav img.user {
+    width: 1.875em;
+    border-radius: 50%;
+    margin-right: 1.3em;
+}
+
+.right-nav a {
+    color: var(--font-color);
+    transition: color .1s ease-in;
+}
+
+.right-nav a:hover {
+    color: var(--primary-color);
+}
+
+.right-nav span.notif-symbol::after {
+    content: "";
+    position: absolute;
+    right: 163px; /* or 170px */
+    top: 45px;
+    background: var(--primary-color);
+    width: 8px;
+    height: 8px;
+    border: #fff solid 3px;
+    border-radius: 50%;
+}
+
+/* HEADING */
+.font-3 {
+    font-size: 3em;
+}
+
+.py-5 {
+    padding: 4.5em 0;
+}
+
+/* CONTROL */
+.control {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.search-filter {
+    display: inline;
+}
+
+.search-filter a {
+    color: var(--deactive-color);
+    
+}
+
+.search-filter span.border-right::after {
+    content: "";
+    border-right: 2px var(--deactive-color) solid;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.search-filter a.active {
+    color: #000;
+    
+}
+
+.tabs ul {
+    list-style-type: none;
+}
+
+.tabs ul li {
+    display: inline;
+}
+
+.tabs ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.tabs ul li a.active {
+    border-bottom: 3px var(--primary-color) solid;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-weight: 600;
+}
+
+.tabs ul li a:hover {
+    border-bottom: 3px var(--primary-color) solid;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-weight: 600;
+}
+
+.double-button {
+    display: inline;
+    font-size: .8em;
+    margin-right: 10px;
+}
+
+.double-button .recency {
+    border: 1px var(--deactive-color) solid;
+    border-radius: 5px 0 0 5px;
+    padding: 7px;
+}
+
+.double-button .alphabet {
+    margin-left: -5px;
+    border: 1px var(--deactive-color) solid;
+    border-radius: 0 5px 5px 0;
+    padding: 7px;
+}
+
+.th-view {
+    display: inline;
+}
+
+.th-view a {
+    color: var(--deactive-color);
+}
+
+.double-button a {
+    color: #000;
+    text-decoration: none;
+}
+
+.double-button a.active {
+    font-weight: 500;
+}
+
+/* CARD */
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    -webkit-box-shadow: 0px 0px 2px 1px rgb(200, 200, 200);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(200, 200, 200);
+    box-shadow: 0px 0px 2px 1px rgba(200, 200, 200);
+    border-radius: 3px;
+    margin-bottom: 3.5em;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 25px 100px -30px rgba(110, 110, 110, 0.6);
+    -moz-box-shadow: 0px 25px 100px -30px rgb(110, 110, 110, 0.6);
+    box-shadow: 0px 25px 100px -30px rgb(110, 110, 110, 0.6);
+}
+
+.card-body {
+    padding: 0 20px;
+}
+
+.card-pic img {
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card-category {
+    font-size: .9em;
+    padding: 20px 0;
+    font-weight: 400;
+}
+
+.card-title {
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.card-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    padding-bottom: 20px;
+}
+
+.card-time i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.card-time .card-time-left {
+    display: flex;
+    align-items: center;
+}
+
+.card-time .card-time-right {
+    display: flex;
+    align-items: center;
+}
+
+p.new-badge {
+    position: relative;
+}
+
+p.new-badge::after {
+    content: "New";
+    font-size: .8em;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px 7px;
+    margin-left: 10px;
+
+    background: linear-gradient(270deg, var(--badges-color), #27910f);
+    background-size: 400%, 400%;
+
+    -webkit-animation: new-badge-animation 1s ease infinite;
+    -moz-animation: new-badge-animation 1s ease infinite;
+    animation: new-badge-animation 1s ease infinite;
+    
+    
+}
+
+@-webkit-keyframes new-badge-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes new-badge-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes new-badge-animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+/* ADD BUTTON */
+div#add-button {
+    position: relative;
+}
+
+div#add-button::after {
+    content: "+";
+    position: absolute;
+    font-size: 3em;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: .35em;
+    line-height: 26px;
+    z-index: 1000;
+    bottom: 60px;
+    right: 60px;
+    -webkit-box-shadow: 0px 0px 50px 10px rgba(110, 110, 110, 0.6);
+    -moz-box-shadow: 0px 0px 50px 10px rgb(110, 110, 110, 0.6);
+    box-shadow: 0px 0px 50px -3px rgb(110, 110, 110, 0.6);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+div#add-button:hover::after {
+    transform: scale(1.1);
+}
